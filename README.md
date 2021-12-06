@@ -28,6 +28,57 @@ Druid's Grove Dice aims to provide these players with hand-made dice in a range 
 - To communicate with customers, both potential and existing, to discuss upcoming products amnd projects.
 
 # **UX**
+## **User Stories**
+The user stories for this site were divided into 5 broad categories, linked below:
+1. [Navigation](#1-navigation)
+2. [User Accounts](#2-user-accounts)
+3. [Purchasing](#3-purchasing)
+4. [Product Management](#4-product-management)
+5. [Communication](#5-communication)
+
+### **1. Navigation**
+| ID         | As a…    | I want to…                             | So I can..                                         |
+|------------|----------|----------------------------------------|----------------------------------------------------|
+| US101      | Customer | View all available products            | Select products to purchase                        |
+| US102      | Customer | Search products by name or description | Find a specific product to purchase                |
+| US103      | Customer | View individual product details        | Learn more about it and decide if I want to buy it |
+| US104      | Customer | View my order history                  | Refer back to my previous purchases                |
+
+### **2. User Accounts**
+| ID            | As a…     | I want to…                 | So I can..                                                                                 |
+|---------------|-----------|----------------------------|--------------------------------------------------------------------------------------------|
+| US201         | Site User | Register for an account    | Have a personalised account, and access different parts of the site   depending on my role |
+| US202         | Site User | Login and logout           | Access my account securely                                                                 |
+| US203         | Site User | Reset my password          | Securely regain access to my account if I forget my password                               |
+| US204         | Customer  | Have a unique profile page | View my order history and saved delivery address, and update the address   if needed       |
+
+### **3. Purchasing**
+| ID         | As a…    | I want to…                                                     | So I can..                                               |
+|------------|----------|----------------------------------------------------------------|----------------------------------------------------------|
+| US301      | Customer | Easily add the desired type and number of items to the cart    | Select the correct items for purchase                    |
+| US302      | Customer | View the items and their quantities in my cart before purchase | Make sure that I have selected the correct items         |
+| US303      | Customer | Change the quantities of items in my cart before purchase      | Make changes to the cart's contents before checkout      |
+| US304      | Customer | Enter payment and delivery information                         | Checkout easily, securely and with confidence            |
+| US305      | Customer | View an order confirmation page on checkout                    | Confirm my order has gone through and is correct         |
+| US306      | Customer | Receive a confirmation email on checkout                       | Keep a copy of the order confirmation for my own records |
+
+### **4. Product Management**
+| ID                 | As a…      | I want to…             | So I can..                                                      |
+|--------------------|------------|------------------------|-----------------------------------------------------------------|
+| US401              | Site Owner | Add products           | Make new products available for site users to view and purchase |
+| US402              | Site Owner | Edit & update products | Change product names and descriptions as needed                 |
+| US403              | Site Owner | Delete products        | Remove products from the store front as needed                  |
+
+### **5. Communication**
+| ID            | As a…      | I want to…                           | So I can..                                         |
+|---------------|------------|--------------------------------------|----------------------------------------------------|
+| US501         | Site User  | View blog posts                      | Keep up to date with the latest news and products  |
+| US502         | Site Owner | Make blog posts                      | Provide updates on the business and new products   |
+| US503         | Site Owner | Edit & update blog posts             | Provide more information or correct typos/mistakes |
+| US504         | Site Owner | Delete blog posts                    | Remove blog posts from the site as needed          |
+| US505         | Site User  | Sign up for the newsletter           | Be notified of new posts as they go live           |
+| US506         | Site User  | Unsubscribe from the newsletter      | Stop receiving the updates if I choose             |
+| US507         | Site User  | Access the site's social media pages | Connect on different social media platforms        |
 
 # **Features**
 
@@ -40,4 +91,4 @@ Druid's Grove Dice aims to provide these players with hand-made dice in a range 
 
 # **Credits**
 
-# **Acknowlegements**
+# **Acknowledgements**

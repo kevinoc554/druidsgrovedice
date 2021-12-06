@@ -88,6 +88,15 @@ Based on the user stories and goals above, the following schema was mapped out:
 
 ![Database Schema](docs/screenshots/database-schema.jpg)
 
+### Layout & Wireframes
+An initial rough layout of the site was then devised, as shown in the following information architecture diagram:
+
+![Information Architecture](docs/screenshots/information-architecture.jpg)
+
+### Colour Scheme
+
+### Fonts
+
 # **Features**
 
 # **Technologies Used**

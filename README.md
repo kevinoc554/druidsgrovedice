@@ -37,7 +37,7 @@ The user stories for this site were divided into 5 broad categories, linked belo
 5. [Communication](#5-communication)
 
 ### **1. Navigation**
-| ID         | As a…    | I want to…                             | So I can..                                         |
+| ID         | As a…    | I want to…                             | So I can...                                         |
 |------------|----------|----------------------------------------|----------------------------------------------------|
 | US101      | Customer | View all available products            | Select products to purchase                        |
 | US102      | Customer | Search products by name or description | Find a specific product to purchase                |
@@ -45,7 +45,7 @@ The user stories for this site were divided into 5 broad categories, linked belo
 | US104      | Customer | View my order history                  | Refer back to my previous purchases                |
 
 ### **2. User Accounts**
-| ID            | As a…     | I want to…                 | So I can..                                                                                 |
+| ID            | As a…     | I want to…                 | So I can...                                                                                 |
 |---------------|-----------|----------------------------|--------------------------------------------------------------------------------------------|
 | US201         | Site User | Register for an account    | Have a personalised account, and access different parts of the site   depending on my role |
 | US202         | Site User | Login and logout           | Access my account securely                                                                 |
@@ -53,7 +53,7 @@ The user stories for this site were divided into 5 broad categories, linked belo
 | US204         | Customer  | Have a unique profile page | View my order history and saved delivery address, and update the address   if needed       |
 
 ### **3. Purchasing**
-| ID         | As a…    | I want to…                                                     | So I can..                                               |
+| ID         | As a…    | I want to…                                                     | So I can...                                               |
 |------------|----------|----------------------------------------------------------------|----------------------------------------------------------|
 | US301      | Customer | Easily add the desired type and number of items to the cart    | Select the correct items for purchase                    |
 | US302      | Customer | View the items and their quantities in my cart before purchase | Make sure that I have selected the correct items         |
@@ -63,14 +63,14 @@ The user stories for this site were divided into 5 broad categories, linked belo
 | US306      | Customer | Receive a confirmation email on checkout                       | Keep a copy of the order confirmation for my own records |
 
 ### **4. Product Management**
-| ID                 | As a…      | I want to…             | So I can..                                                      |
+| ID                 | As a…      | I want to…             | So I can...                                                      |
 |--------------------|------------|------------------------|-----------------------------------------------------------------|
 | US401              | Site Owner | Add products           | Make new products available for site users to view and purchase |
 | US402              | Site Owner | Edit & update products | Change product names and descriptions as needed                 |
 | US403              | Site Owner | Delete products        | Remove products from the store front as needed                  |
 
 ### **5. Communication**
-| ID            | As a…      | I want to…                           | So I can..                                         |
+| ID            | As a…      | I want to…                           | So I can...                                         |
 |---------------|------------|--------------------------------------|----------------------------------------------------|
 | US501         | Site User  | View blog posts                      | Keep up to date with the latest news and products  |
 | US502         | Site Owner | Make blog posts                      | Provide updates on the business and new products   |
@@ -79,6 +79,14 @@ The user stories for this site were divided into 5 broad categories, linked belo
 | US505         | Site User  | Sign up for the newsletter           | Be notified of new posts as they go live           |
 | US506         | Site User  | Unsubscribe from the newsletter      | Stop receiving the updates if I choose             |
 | US507         | Site User  | Access the site's social media pages | Connect on different social media platforms        |
+
+## **Design**
+
+### Database Schema
+
+Based on the user stories and goals above, the following schema was mapped out:
+
+![Database Schema](docs/screenshots/database-schema.jpg)
 
 # **Features**
 

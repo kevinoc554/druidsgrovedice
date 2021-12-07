@@ -2,7 +2,7 @@
 
 ![Hero Image](docs/screenshots/hero-image.png)
 
-Druid's Grove Dice is an independent Irish dice maker inspired by nature, myth and magic. This site an online storfront and creator blog that aims to provide fans of tabletop role-playing games a place to find and purchase bespoke hand-made dice sets.
+Druid's Grove Dice is an independent Irish dice maker inspired by nature, myth and magic. This site an online storefront and creator blog that aims to provide fans of tabletop role-playing games a place to find and purchase bespoke hand-made dice sets.
 
 View the live site [here](LINK TO FOLLOW).
 
@@ -26,8 +26,8 @@ Druid's Grove Dice aims to provide these players with hand-made dice in a range 
 - To browse and purchase custom dice for tabletop gaming.
 
 **Site Owner Goals:**
-- To display and sell custom made dice and wares
-- To communicate with customers, both potential and existing, to discuss upcoming products amnd projects.
+- To display and sell custom made dice and wares.
+- To communicate with customers, both potential and existing, to discuss upcoming products and projects.
 
 # **UX**
 ## **User Stories**
@@ -99,9 +99,9 @@ An initial rough layout of the site was then devised, as shown in the following 
 *Initial wireframes for each of these pages can be found [here](docs/wireframes).*
 
 ### Color Scheme
-The following color pallette was chosen for the site:
+The following color palette was chosen for the site:
 
-![Color Pallette](docs/screenshots/color-pallette.png)
+![Color palette](docs/screenshots/color-pallette.png)
 
 These colors were chosen to tie in with the nature imagery displayed in the hero image (shown above). Muted colors are used to preserve the desired aesthetic while also ensuring the styling does not draw away the attention of the user from the site's content. 
 
@@ -143,7 +143,7 @@ Tools - Development & Hosting:
 
 Tools - Documentation:
 - [Balsamiq](https://balsamiq.com/wireframes/) - Balsamiq was used to create the initial wireframes and diagrams.
-- [Coolor](https://coolors.co/) - Coolor was used to generate the color pallette image.
+- [Coolor](https://coolors.co/) - Coolor was used to generate the color palette image.
 - [DBDiagram](https://dbdiagram.io/home/) - DBDiagram was used to generate the database model image.
 
 # **Testing**

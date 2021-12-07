@@ -115,6 +115,36 @@ In terms of accessiblity, the site's text is predominantly in a shade of black (
 # **Features**
 
 # **Technologies Used**
+Languages:
+- [HTML5](https://developer.mozilla.org/en-US/docs/Web/HTML) - the pages of this site were designed using HTML.
+- [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS) - the pages of this site were styled using CSS.
+- [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - the interactive elements of this site were implemented using JavaScript.
+- [Python](https://www.python.org/) - back-end functionality of the site was written in Python.
+
+Frameworks:
+- [Django](https://www.djangoproject.com/) - The Django framework was used to structure the site's back-end, handle database operations and pass information to and from the front-end.
+- [Bootstrap](https://getbootstrap.com/) - Bootstrap was used to lay out and style the site's front-end, and aid in responsive design.
+- [jQuery](https://jquery.com/) - jQuery was used to simplify and condense JavaScript, particularly for interacting with, and writing to, the DOM.
+
+Databases:
+- [MySQL](https://www.mysql.com/) - A MySQL database was used in development.
+- [Heroku Postgres ](https://www.heroku.com/postgres) - A Heroku PostgreSQL database is used for the deployed site.
+
+Packages & Extensions:
+
+Tools - Development & Hosting:
+- [Gitpod](https://www.gitpod.io/) - The site was developed using Gitpod as the development environment.
+- [GitHub](https://github.com/) - Files for this project are hosted on it's [GitHub repository](https://github.com/kevinoc554/druidsgrovedice).
+- [Heroku](https://www.heroku.com/home) - The live deployed version of the site is hosted on Heroku. 
+- [Amazon AWS](https://aws.amazon.com/) (S3) - Media and static files for the project are hosted in an AWS S3 bucket.
+- [Font Awesome](https://fontawesome.com/) - Font Awesome icons were used for the social media links in the footer, and throughout the checkout process.
+- [Google Fonts](https://fonts.google.com/) - Google Fonts were used throughout the project.
+- [Favicon Generator](https://www.favicongenerator.com/) - Favicon Generator was used to create and size the favicon for the site.
+
+Tools - Documentation:
+- [Balsamiq](https://balsamiq.com/wireframes/) - Balsamiq was used to create the initial wireframes and diagrams.
+- [Coolor](https://coolors.co/) - Coolor was used to generate the color pallette image.
+- [DBDiagram](https://dbdiagram.io/home/) - DBDiagram was used to generate the database model image.
 
 # **Testing**
 *Full details of testing and bugs can be found [here](docs/TESTING.md).*

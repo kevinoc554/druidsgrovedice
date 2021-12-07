@@ -1,6 +1,8 @@
-# Druids Grove Dice
+# Druid's Grove Dice
 
-Druids Grove Dice is an online storfront and creator blog that aims to provide fans of tabletop role-playing games a place to find and purchase bespoke hand-made dice sets.
+![Hero Image](docs/screenshots/hero-image.png)
+
+Druid's Grove Dice is an online storfront and creator blog that aims to provide fans of tabletop role-playing games a place to find and purchase bespoke hand-made dice sets.
 
 View the live site [here](LINK TO FOLLOW).
 
@@ -18,7 +20,7 @@ View the live site [here](LINK TO FOLLOW).
 # **Project Goals**
 In recent years tabletop role-playing games have seen a huge surge in popularity, and more people than ever are carefully crafting characters to play and adventures to enjoy with their friends.
 
-Druid's Grove Dice aims to provide these players with hand-made dice in a range of colours and themes, allowing them to further customize and personalize their gaming experiences.
+Druid's Grove Dice aims to provide these players with hand-made dice in a range of colors and themes, allowing them to further customize and personalize their gaming experiences.
 
 **User Goals:**
 - To browse and purchase custom dice for tabletop gaming.
@@ -96,7 +98,14 @@ An initial rough layout of the site was then devised, as shown in the following 
 ### Wireframes
 *Initial wireframes for each of these pages can be found [here](docs/wireframes).*
 
-### Colour Scheme
+### Color Scheme
+The following color pallette was chosen for the site:
+
+![Color Pallette](docs/screenshots/color-pallette.png)
+
+These colors were chosen to tie in with the nature imagery displayed in the hero image (shown above). Muted colors are used to preserve the desired aesthetic while also ensuring the styling does not draw away the attention of the user from the site's content. 
+
+In terms of accessiblity, the site's text is predominantly in a shade of black (#1C1A1A) against an off-white background (#FAFAFA). This gives a contrast ratio of 16.59:1 per [WebAIM](https://webaim.org/resources/contrastchecker/), well above the minimum needed to meet [WCAG AAA](https://www.w3.org/WAI/WCAG2AAA-Conformance) standards.
 
 ### Fonts
 

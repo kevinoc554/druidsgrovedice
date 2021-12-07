@@ -2,7 +2,7 @@
 
 ![Hero Image](docs/screenshots/hero-image.png)
 
-Druid's Grove Dice is an online storfront and creator blog that aims to provide fans of tabletop role-playing games a place to find and purchase bespoke hand-made dice sets.
+Druid's Grove Dice is an independent Irish dice maker inspired by nature, myth and magic. This site an online storfront and creator blog that aims to provide fans of tabletop role-playing games a place to find and purchase bespoke hand-made dice sets.
 
 View the live site [here](LINK TO FOLLOW).
 
@@ -152,5 +152,7 @@ Tools - Documentation:
 # **Deployment**
 
 # **Credits**
+- Images, logos and site name are used with permission from [Druid's Grove Dice](https://www.instagram.com/druidsgrovedice/)
 
 # **Acknowledgements**
+I would like to thank Sarah at Druid's Grove Dice, Jack Wachira, and the Student Care team at Code Institute for their support during this project.

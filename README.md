@@ -108,6 +108,9 @@ These colors were chosen to tie in with the nature imagery displayed in the hero
 In terms of accessiblity, the site's text is predominantly in a shade of black (#1C1A1A) against an off-white background (#FAFAFA). This gives a contrast ratio of 16.59:1 per [WebAIM](https://webaim.org/resources/contrastchecker/), well above the minimum needed to meet [WCAG AAA](https://www.w3.org/WAI/WCAG2AAA-Conformance) standards.
 
 ### Fonts
+- [Ovo](https://fonts.google.com/specimen/Ovo#standard-styles) - Used in the site's brand logo, hero image and in page headers.
+- [Goudy Bookletter](https://fonts.google.com/specimen/Goudy+Bookletter+1911#standard-styles) - Used in sub-headings and product titles.
+- [Roboto](https://fonts.google.com/specimen/Roboto#standard-styles) - Used in product descriptions and for any pricing information.
 
 # **Features**
 

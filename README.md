@@ -131,6 +131,7 @@ Databases:
 - [Heroku Postgres ](https://www.heroku.com/postgres) - A Heroku PostgreSQL database is used for the deployed site.
 
 Packages & Extensions:
+- [django-allauth](https://django-allauth.readthedocs.io/en/latest/index.html) - The site's user management is handled using django-allauth.
 
 Tools - Development & Hosting:
 - [Gitpod](https://www.gitpod.io/) - The site was developed using Gitpod as the development environment.

@@ -1,0 +1,16 @@
+html {
+    height: 100%;
+}
+
+.jumbotron {
+    height: 25vh;
+    background: url('/media/hero-image-sm.png') no-repeat center;
+}
+
+/* Media Queries */
+@media screen and (min-width: 767px) {
+    .jumbotron {
+        height: 70vh;
+        background: url('/media/hero-image.png') no-repeat center;
+    }
+}

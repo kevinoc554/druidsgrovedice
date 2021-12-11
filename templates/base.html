@@ -22,7 +22,7 @@
 
     {% block extra_css %}
     {% endblock %}
-    <title>Druid's Grove Dice | {% block extra_title %}{% endblock %}</title>
+    <title>Druid's Grove Dice | {% block page_title %}{% endblock %}</title>
 </head>
 
 <body>
@@ -37,7 +37,7 @@
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand mx-auto" href="#">Logo</a>
+        <a class="navbar-brand mx-auto" href="{% url 'home' %}">Logo</a>
 
         <form class="form-inline my-2 my-lg-0 order-lg-last">
             <input class="form-control mr-sm-2 d-none" type="search" placeholder="Search" aria-label="Search">
@@ -48,7 +48,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Catalog</a>
@@ -56,12 +56,18 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Blog</a>
                 </li>
+                {% if request.user.is_authenticated %}
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Login</a>
+                    <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+                </li>
+                {% else %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'account_login' %}">Login</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Register</a>
+                    <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
                 </li>
+                {% endif %}
             </ul>
         </div>
         

@@ -1,10 +1,54 @@
+/* Imports */
+@import url('https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&family=Ovo&family=Roboto&display=swap');
+
+/* Variables */
+:root {
+    --main-bg-color: #fafafa;
+    --secondary-bg-color: #3d2f55;
+    --main-font-color: #1c1a1a;
+    --secondary-font-color: #fafafa;
+    --accent-color-light: #476154;
+    --accent-color-dark: #1a3020;
+    --main-title-font: 'Ovo';
+    --secondary-title-font: 'Goudy Bookletter 1911';
+    --general-use-font: 'Roboto';
+}
+
+/* General */
 html {
     height: 100%;
 }
 
+body {
+    background-color: var(--main-bg-color);
+    color: var(--main-font-color);
+    font-family: var(--general-use-font);
+}
+
+h1 {
+    font-family: var(--main-title-font);
+}
+
+h5 {
+    font-family: var(--secondary-title-font);
+}
+
+/* Home */
 .jumbotron {
     height: 25vh;
     background: url('/media/hero-image-sm.png') no-repeat center;
+}
+
+.product-btn {
+    background-color: var(--accent-color-dark);
+    border-color: var(--accent-color-light);
+}
+
+.product-btn:hover,
+.product-btn:active,
+.product-btn:focus {
+    background-color: var(--accent-color-light);
+    border-color: var(--accent-color-dark);
 }
 
 /* Media Queries */

@@ -151,6 +151,10 @@ body > footer {
 }
 
 @media screen and (min-width: 1023px) {
+    .jumbotron {
+        margin-top: 3.8rem;
+    }
+
     #id_login,
     #id_password,
     .signup p input,

@@ -52,8 +52,10 @@ h5 {
 }
 
 body > footer {
-    position: sticky;
-    top: 100vh;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
     background-color: var(--accent-color-dark);
     color: var(--secondary-font-color);
 }

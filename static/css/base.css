@@ -116,18 +116,17 @@ body > footer {
 
 #id_login,
 #id_password,
-.change_passwd form p input {
+.signup p input,
+.change_passwd form p input,
+.password_change p input {
     width: 90%;
 }
 
 .signup p label,
 .password_reset p label,
-.change_passwd form p label {
+.change_passwd form p label,
+.password_change p label {
     display: none;
-}
-
-.signup p input {
-    width: 90%;
 }
 
 /* Media Queries */
@@ -145,7 +144,8 @@ body > footer {
     #id_login,
     #id_password,
     .signup p input,
-    .change_passwd form p input {
+    .change_passwd form p input,
+    .password_change p input {
         width: 75%;
     }
 }
@@ -154,7 +154,8 @@ body > footer {
     #id_login,
     #id_password,
     .signup p input,
-    .change_passwd form p input {
+    .change_passwd form p input,
+    .password_change p input {
         width: 50%;
     }
 }

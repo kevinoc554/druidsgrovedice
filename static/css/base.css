@@ -35,6 +35,8 @@ h5 {
 
 .navbar {
     font-family: var(--main-title-font);
+    border-bottom: 1px solid;
+    border-color: rgba(0, 0, 0, 0.2);
 }
 
 .navbar-nav .nav-item .nav-link {
@@ -88,16 +90,31 @@ body > footer {
     background: url('/media/hero-image-sm.png') no-repeat center;
 }
 
-.product-btn {
+.accent-btn {
     background-color: var(--accent-color-dark);
     border-color: var(--accent-color-light);
 }
 
-.product-btn:hover,
-.product-btn:active,
-.product-btn:focus {
+.accent-btn:hover,
+.accent-btn:active,
+.accent-btn:focus {
     background-color: var(--accent-color-light);
     border-color: var(--accent-color-dark);
+}
+
+/* Allauth */
+.allauth-container {
+    margin-top: 5.8rem;
+}
+
+.login p label[for='id_login'],
+.login p label[for='id_password'] {
+    display: none;
+}
+
+#id_login,
+#id_password {
+    width: 90%;
 }
 
 /* Media Queries */
@@ -106,5 +123,21 @@ body > footer {
         margin-top: 4.4rem;
         height: 70vh;
         background: url('/media/hero-image.png') no-repeat center;
+    }
+
+    .allauth-container {
+        margin-top: 5.3rem;
+    }
+
+    #id_login,
+    #id_password {
+    width: 75%;
+    }
+}
+
+@media screen and (min-width: 1023px) {
+    #id_login,
+    #id_password {
+    width: 50%;
     }
 }

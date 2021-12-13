@@ -33,6 +33,22 @@ h5 {
     font-family: var(--secondary-title-font);
 }
 
+.navbar {
+    font-family: var(--main-title-font);
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: var(--main-font-color);
+}
+
+.active {
+    font-weight: bold;
+}
+
+.bg-light {
+    background-color: var(--main-bg-color);
+}
+
 body > footer {
     position: sticky;
     top: 100vh;

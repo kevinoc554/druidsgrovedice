@@ -119,6 +119,14 @@ body > footer {
     width: 90%;
 }
 
+.signup p label {
+    display: none;
+}
+
+.signup p input {
+    width: 90%;
+}
+
 /* Media Queries */
 @media screen and (min-width: 767px) {
     .jumbotron {
@@ -133,13 +141,21 @@ body > footer {
 
     #id_login,
     #id_password {
-    width: 75%;
+        width: 75%;
+    }
+
+    .signup p input {
+        width: 75%;
     }
 }
 
 @media screen and (min-width: 1023px) {
     #id_login,
     #id_password {
-    width: 50%;
+        width: 50%;
+    }
+
+    .signup p input {
+        width: 50%;
     }
 }

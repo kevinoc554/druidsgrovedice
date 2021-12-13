@@ -115,11 +115,14 @@ body > footer {
 }
 
 #id_login,
-#id_password {
+#id_password,
+.change_passwd form p input {
     width: 90%;
 }
 
-.signup p label {
+.signup p label,
+.password_reset p label,
+.change_passwd form p label {
     display: none;
 }
 
@@ -140,22 +143,18 @@ body > footer {
     }
 
     #id_login,
-    #id_password {
-        width: 75%;
-    }
-
-    .signup p input {
+    #id_password,
+    .signup p input,
+    .change_passwd form p input {
         width: 75%;
     }
 }
 
 @media screen and (min-width: 1023px) {
     #id_login,
-    #id_password {
-        width: 50%;
-    }
-
-    .signup p input {
+    #id_password,
+    .signup p input,
+    .change_passwd form p input {
         width: 50%;
     }
 }

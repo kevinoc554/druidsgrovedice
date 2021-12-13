@@ -25,7 +25,7 @@ body {
     font-family: var(--general-use-font);
 }
 
-h1 {
+h1, h2 {
     font-family: var(--main-title-font);
 }
 

@@ -51,6 +51,10 @@ h5 {
     background-color: var(--main-bg-color);
 }
 
+.search-icon {
+    color: var(--secondary-font-color);
+}
+
 body > footer {
     position: fixed;
     left: 0;

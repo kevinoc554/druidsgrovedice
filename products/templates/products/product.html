@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_title %}Catalog{% endblock %}
+
+{% block content %}
+<div class="container-fluid heading-container">
+    <h1>All Products</h1>
+    <hr>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            {{ products }}
+        </div>
+    </div>
+</div>
+{% endblock %}

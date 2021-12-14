@@ -55,6 +55,10 @@ h5 {
     color: var(--secondary-font-color);
 }
 
+.heading-container {
+    margin-top: 5.8rem;
+}
+
 body > footer {
     position: fixed;
     left: 0;

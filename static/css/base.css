@@ -153,12 +153,17 @@ body > footer {
 
 /* Catalog */
 .catalog-container {
-    padding-bottom: 160px;
+    padding-bottom: 10rem;
 }
 
 .product-card {
     background-color: var(--main-bg-color);
     border: none;
+}
+
+/* Product Detail */
+.product-detail-container {
+    padding-bottom: 10rem;
 }
 
 /* Media Queries */

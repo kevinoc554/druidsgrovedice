@@ -51,12 +51,38 @@ h4, h5 {
     background-color: var(--main-bg-color);
 }
 
-.search-icon {
+.search-icon,
+.btn-font {
     color: var(--secondary-font-color);
 }
 
 .heading-container {
     margin-top: 5.8rem;
+}
+
+.accent-btn {
+    background-color: var(--accent-color-dark);
+    border-color: var(--accent-color-light);
+}
+
+.accent-btn:hover,
+.accent-btn:active,
+.accent-btn:focus {
+    background-color: var(--accent-color-light);
+    border-color: var(--accent-color-dark);
+}
+
+.alt-btn {
+    color: var(--accent-color-dark);
+    border-color: var(--accent-color-dark);
+}
+
+.alt-btn:hover,
+.alt-btn:active,
+.alt-btn:focus {
+    color: var(--secondary-font-color);
+    background-color: var(--accent-color-light);
+    border-color: var(--accent-color-dark);
 }
 
 body > footer {
@@ -98,18 +124,6 @@ body > footer {
     margin-top: 5.3rem;
     height: 25vh;
     background: url('/media/hero-image-sm.png') no-repeat center;
-}
-
-.accent-btn {
-    background-color: var(--accent-color-dark);
-    border-color: var(--accent-color-light);
-}
-
-.accent-btn:hover,
-.accent-btn:active,
-.accent-btn:focus {
-    background-color: var(--accent-color-light);
-    border-color: var(--accent-color-dark);
 }
 
 /* Allauth */

@@ -25,11 +25,11 @@ body {
     font-family: var(--general-use-font);
 }
 
-h1, h2 {
+h1, h2, h3 {
     font-family: var(--main-title-font);
 }
 
-h5 {
+h4, h5 {
     font-family: var(--secondary-title-font);
 }
 
@@ -135,6 +135,16 @@ body > footer {
 .change_passwd form p label,
 .password_change p label {
     display: none;
+}
+
+/* Catalog */
+.catalog-container {
+    padding-bottom: 160px;
+}
+
+.product-card {
+    background-color: var(--main-bg-color);
+    border: none;
 }
 
 /* Media Queries */

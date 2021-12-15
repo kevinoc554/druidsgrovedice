@@ -5,14 +5,44 @@
 
 {% block content %}
 <div class="container-fluid heading-container">
-    <h1>All Products</h1>
+    <h1>Catalog</h1>
     <hr>
 </div>
-<div class="container">
+<div class="container catalog-container">
     <div class="row">
-        <div class="col">
-            {{ products }}
+        <div class="col-12 col-md-6 text-center text-md-left mb-2 mb-md-0">
+            <h3>Products:</h3>
         </div>
+        <div class="col-6 col-md-3 text-md-center">
+            {% if request.user.is_superuser %}
+                <span><h5><i class="fas fa-plus-circle mr-1"></i>Add a product</h5></span>
+            {% endif %}
+        </div>
+        <div class="col-6 col-md-3 text-md-center">
+            <span>Sort by: A-Z <i class="fas fa-chevron-circle-down"></i></span>
+        </div>
+    </div>
+    <div class="row">
+        {% if products %}
+            {% for product in products %}
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card product-card my-2">
+                    <img src="/media/{{ product.image }}" alt="Placeholder Image" class="card-img-top">
+                    <div class="card-body text-center text-md-left">
+                        <h5 class="card-title">{{ product.name }}</h5>
+                        <p class="card-text">€{{ product.price }}</p>
+                        <div class="text-center text-md-left">
+                            <a href="#" class="btn btn-primary product-btn">More Info</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        {% else %}
+        <div class="col-12 text-center">
+            <p>No products found.</p>
+        </div>
+        {% endif %}
     </div>
 </div>
 {% endblock %}

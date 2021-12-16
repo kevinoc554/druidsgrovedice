@@ -57,9 +57,16 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'products' %}">Catalog</a>
-                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Catalog</a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#">RPG Dice</a>
+                      <a class="dropdown-item" href="#">Boardgame Dice</a>
+                      <a class="dropdown-item" href="#">Dice Masters</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="{% url 'products' %}">All Products</a>
+                    </div>
+                  </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Blog</a>
                 </li>

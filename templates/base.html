@@ -95,9 +95,9 @@
               </button>
             </div>
             <div class="modal-body">
-                <form class="form" method="GET" action="">
+                <form class="form" method="GET" action="{% url 'products' %}">
                     <div class="input-group w-100">
-                        <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search products">
+                        <input class="form-control border border-black rounded-0" type="text" name="product-search" placeholder="Search products">
                         <div class="input-group-append">
                             <button class="form-control form-control btn accent-btn" type="submit">
                                 <span>

@@ -56,6 +56,11 @@ h4, h5 {
     color: var(--secondary-font-color);
 }
 
+.dropdown-menu {
+    background-color: var(--main-bg-color);
+    border: none;
+}
+
 .heading-container {
     margin-top: 5.8rem;
 }
@@ -198,5 +203,9 @@ body > footer {
     .change_passwd form p input,
     .password_change p input {
         width: 50%;
+    }
+
+    .dropdown-menu {
+        border: 1px solid rgba(0, 0, 0, 0.15);
     }
 }

@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
-from .models import Product
+from .models import Product, Category
 
 
 def all_products(request):
@@ -10,18 +10,26 @@ def all_products(request):
     """
     products = Product.objects.all()
     query = None
+    categories = None
 
     if request.GET:
-        query = request.GET['product-search']
-        if not query:
-            messages.error(request, 'You did not enter any search terms.')
-            return redirect(reverse('products'))
-        queries = Q(name__icontains=query) | Q(description__icontains=query)
-        products = products.filter(queries)
+        if 'category' in request.GET:
+            categories = request.GET['category'].split(',')
+            products = products.filter(category__name__in=categories)
+            categories = Category.objects.filter(name__in=categories)
+
+        if 'product_search' in request.GET:
+            query = request.GET['product-search']
+            if not query:
+                messages.error(request, 'You did not enter any search terms.')
+                return redirect(reverse('products'))
+            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            products = products.filter(queries)
 
     context = {
         'products': products,
-        'search_term': query
+        'search_term': query,
+        'current_categories': categories,
     }
 
     return render(request, 'products/product.html', context)

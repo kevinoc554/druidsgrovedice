@@ -18,6 +18,7 @@
                 <div class="col-12 col-md-6 col-lg-12 mt-2">
                     <h2>{{ product.name }}</h2>
                     <h4>€{{ product.price }}</h4>
+                    <h5><span class="d-none d-md-inline">Category:</span> <a href="{% url 'products' %}?category={{ product.category.name }}" class="badge badge-pill badge-dark">{{ product.category.friendly_name }}</a></h5>
                 </div>
                 <div class="col-12 col-md-6 col-lg-12 mt-2">
                     <div>Quantity:</div>

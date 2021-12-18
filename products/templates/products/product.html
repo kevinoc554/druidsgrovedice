@@ -16,14 +16,17 @@
         <div class="col-12 col-md-6 text-center text-md-left mb-2 mb-md-0">
             <h3>Products:</h3>
             <div class="mb-2">
+                <span class="sub-heading d-none d-md-inline">Categories:</span>
                 {% if current_categories %}
                     {% for cat in current_categories %}
-                        <span class="badge badge-pill badge-dark">{{ cat.friendly_name }}</span>
+                        <a href="{% url 'products' %}?category={{ cat.name }}" class="badge badge-pill badge-dark">{{ cat.friendly_name }}</a>
                     {% endfor %}
+                    <span>|</span>
+                    <a href="{% url 'products' %}" class="badge badge-pill badge-light">View All Products</a>
                 {% else %}
-                    <span class="badge badge-pill badge-dark">RPG Dice</span>
-                    <span class="badge badge-pill badge-dark">Boardgame Dice</span>
-                    <span class="badge badge-pill badge-dark">Dice Masters</span>
+                    <a href="{% url 'products' %}?category=rpg_dice" class="badge badge-pill badge-dark">RPG Dice</a>
+                    <a href="{% url 'products' %}?category=bg_dice" class="badge badge-pill badge-dark">Boardgame Dice</a>
+                    <a href="{% url 'products' %}?category=dice_masters" class="badge badge-pill badge-dark">Dice Masters</a>
                 {% endif %}
             </div>
         </div>

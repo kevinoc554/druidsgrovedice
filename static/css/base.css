@@ -65,6 +65,11 @@ h4, h5 {
     margin-top: 5.8rem;
 }
 
+.sub-heading {
+    font-family: var(--secondary-title-font);
+    font-weight: bold;
+}
+
 .accent-btn {
     background-color: var(--accent-color-dark);
     border-color: var(--accent-color-light);

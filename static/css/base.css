@@ -100,6 +100,28 @@ h4, h5 {
     padding-bottom: 6rem;
 }
 
+#toTopBtn {
+    position: fixed;
+    bottom: 4rem;
+    right: 1rem;
+    border: 0;
+    border-radius: 50%;
+    padding: 0;
+    z-index: 100;
+    display: none;
+    cursor: pointer;
+}
+
+#toTopBtn i {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    padding-top: .5rem;
+    font-size: 2rem;
+    color: var(--secondary-font-color);
+    background-color: var(--secondary-bg-color);
+}
+
 body > footer {
     position: fixed;
     left: 0;

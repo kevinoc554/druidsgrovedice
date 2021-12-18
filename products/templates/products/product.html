@@ -30,13 +30,22 @@
                 {% endif %}
             </div>
         </div>
-        <div class="col-6 col-md-3 text-md-center">
+        <div class="col-12 col-md-3 text-center my-1">
             {% if request.user.is_superuser %}
                 <span><h5><i class="fas fa-plus-circle mr-1"></i>Add a product</h5></span>
             {% endif %}
         </div>
-        <div class="col-6 col-md-3 text-md-center">
-            <span>Sort by: A-Z <i class="fas fa-chevron-circle-down"></i></span>
+        <div class="col-12 col-md-3 text-center my-1">
+            <div>
+                <span class="d-none d-lg-inline">Sort by:</span>
+                <select id="sort-selector" class="">
+                    <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
+                    <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (a-z)</option>
+                    <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (z-a)</option>
+                    <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low-high)</option>
+                    <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high-low)</option>
+                </select>
+            </div>
         </div>
     </div>
     <div class="row">

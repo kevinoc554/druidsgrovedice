@@ -90,6 +90,11 @@ h4, h5 {
     border-color: var(--accent-color-dark);
 }
 
+.main-container,
+.catalog-container {
+    padding-bottom: 6rem;
+}
+
 body > footer {
     position: fixed;
     left: 0;

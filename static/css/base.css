@@ -6,6 +6,7 @@
     --main-bg-color: #fafafa;
     --secondary-bg-color: #3d2f55;
     --main-font-color: #1c1a1a;
+    --main-font-highlight: rgba(28, 26, 26, 0.75);
     --secondary-font-color: #fafafa;
     --accent-color-light: #476154;
     --accent-color-dark: #1a3020;
@@ -120,6 +121,16 @@ h4, h5 {
     font-size: 2rem;
     color: var(--secondary-font-color);
     background-color: var(--secondary-bg-color);
+}
+
+.nav-icon {
+    color: var(--main-font-color);
+}
+
+.nav-icon:hover,
+.nav-icon:active,
+.nav-icon:focus {
+    color: var(--main-font-highlight);
 }
 
 body > footer {

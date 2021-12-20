@@ -11,9 +11,12 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <p>Check if context processor is working by printing out the delivery threshold: {{ free_delivery_threshold }}</p>
+                
                 {% if cart_items %}
-                    <div class="table-responsive"></div>
+                    <div class="table-responsive">
+                        <p>Check if context processor is working by printing out the shopping cart:</p>
+                        {{ cart_items }}
+                    </div>
                 {% else %}
                     <p class="text-center mt-5">There are no items in your Shopping Cart.</p>
                 {% endif %}

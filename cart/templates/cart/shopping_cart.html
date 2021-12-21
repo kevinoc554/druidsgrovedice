@@ -30,7 +30,41 @@
                                     <td>
                                         <span class="w-auto">{{ item.product.name }}</span>
                                     </td>
-                                    <td>{{ item.quantity }}</td>
+                                    <td>
+                                        <form action="" method="POST">
+                                            {% csrf_token %}
+                                            <div class="form-group w-75">
+                                                <div class="input-group input-group_{{ item.item_id }}">
+                                                    <div class="input-group-prepend">
+                                                        <button class="decrement-qty decrement-qty_{{ item.item_id }} btn btn-sm accent-btn"
+                                                            data-item_id="{{ item.item_id }}">
+                                                            <i class="fas fa-minus fa-sm"></i>
+                                                        </button>
+                                                    </div>
+                                                    <input class="form-control form-control-sm qty_input id_qty_{{ item.item_id }}" type="number"
+                                                        name="quantity" value="{{ item.quantity }}" min="1" max="99" data-item_id="{{ item.item_id }}">
+                                                    <div class="input-group-append">
+                                                        <button class="increment-qty increment-qty_{{ item.item_id }} btn btn-sm accent-btn"
+                                                            data-item_id="{{ item.item_id }}">
+                                                            <i class="fas fa-plus fa-sm"></i>
+                                                        </button>
+                                                    </div>
+                                                    <div class="input-group-append ml-md-1">
+                                                        <a class="update-item update-item_{{ item.item_id }} btn btn-sm accent-btn"
+                                                            data-item_id="{{ item.item_id }}">
+                                                            <i class="far fa-check-circle fa-sm btn-font"></i>
+                                                        </a>
+                                                    </div>
+                                                    <div class="input-group-append ml-md-1">
+                                                        <a class="delete-item delete-item_{{ item.item_id }} btn btn-sm accent-btn"
+                                                            data-item_id="{{ item.item_id }}">
+                                                            <i class="far fa-trash-alt fa-sm btn-font"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </td>
                                     <td>€{{ item.product.price }}</td>
                                 </tr>
                                 {% endfor %}

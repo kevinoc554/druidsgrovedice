@@ -1,4 +1,8 @@
 $(document).ready(function () {
+    checkQtyInputsOnLoad();
+    checkQtyInputsOnChange();
+    incrementQty();
+    decrementQty();
     autoFocusModal();
     sortSelector();
     toTopBtn();
@@ -53,4 +57,59 @@ function toTopBtn() {
             $('html, body').stop();
         }
     });
+}
+
+// Increment the quantity input by one when the Plus icon is clicked
+function incrementQty() {
+    $('.increment-qty').click(function (e) {
+        e.preventDefault();
+        let itemId = $(this).data('item_id');
+        let currentValue = parseInt($(`.id_qty_${itemId}`).val())
+        let newValue = currentValue + 1
+        $(`.id_qty_${itemId}`).val(newValue)
+        enableDisableQuantityInputs(itemId)
+    })
+}
+
+
+// Decrement the quantity input by one when the Minus icon is clicked
+function decrementQty() {
+    $('.decrement-qty').click(function (e) {
+        e.preventDefault();
+        let itemId = $(this).data('item_id');
+        let currentValue = parseInt($(`.id_qty_${itemId}`).val())
+        let newValue = currentValue - 1
+        $(`.id_qty_${itemId}`).val(newValue)
+        enableDisableQuantityInputs(itemId)
+    })
+}
+
+
+// Disable +/- buttons to prevent users from inputting
+// a value below 1, or above 99
+function enableDisableQuantityInputs(itemId) {
+    let currentValue = parseInt($(`.id_qty_${itemId}`).val())
+    let minusDisabled = currentValue < 2
+    let plusDisabled = currentValue > 98
+
+    $(`.increment-qty_${itemId}`).prop('disabled', plusDisabled)
+    $(`.decrement-qty_${itemId}`).prop('disabled', minusDisabled)
+}
+
+// Check input elements on load and disable +/- buttons as needed
+function checkQtyInputsOnLoad() {
+    let allQuantityInputs = $('.qty_input');
+    for (let i = 0; i < allQuantityInputs.length; i++) {
+        let itemId = $(allQuantityInputs[i]).data('item_id');
+        enableDisableQuantityInputs(itemId);
+    }
+}
+
+// Check input elements on change of input value and disable +/- buttons as needed
+// Handles direct user inputs
+function checkQtyInputsOnChange() {
+    $('.qty_input').change(function() {
+        let itemId = $(this).data('item_id');
+        enableDisableQuantityInputs(itemId);
+    })
 }

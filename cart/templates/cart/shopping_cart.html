@@ -8,14 +8,34 @@
         <h1>Your Cart</h1>
         <hr>
     </div>
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-12">
                 
                 {% if cart_items %}
                     <div class="table-responsive">
-                        <p>Check if context processor is working by printing out the shopping cart:</p>
-                        {{ cart_items }}
+                        <table class="table table-sm">
+                            <thead>
+                                <th scope="col">Product</th>
+                                <th scope="col"></th>
+                                <th scope="col">Quantity</th>
+                                <th scope="col">Price</th>
+                            </thead>
+                            <tbody>
+                                {% for item in cart_items %}
+                                <tr>
+                                    <td>
+                                        <img class="img-fluid w-auto" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                                    </td>
+                                    <td>
+                                        <span class="w-auto">{{ item.product.name }}</span>
+                                    </td>
+                                    <td>{{ item.quantity }}</td>
+                                    <td>€{{ item.product.price }}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
                     </div>
                 {% else %}
                     <p class="text-center mt-5">There are no items in your Shopping Cart.</p>

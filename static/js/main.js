@@ -113,3 +113,8 @@ function checkQtyInputsOnChange() {
         enableDisableQuantityInputs(itemId);
     })
 }
+
+// Enable Bootstrap tooltips
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })

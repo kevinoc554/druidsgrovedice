@@ -14,7 +14,7 @@
                 
                 {% if cart_items %}
                     <div class="table-responsive">
-                        <table class="table table-sm">
+                        <table class="table table-sm table-borderless">
                             <thead>
                                 <th scope="col">Product</th>
                                 <th scope="col"></th>
@@ -25,7 +25,7 @@
                                 {% for item in cart_items %}
                                 <tr>
                                     <td>
-                                        <img class="img-fluid w-auto" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                                        <img class="img-fluid h-50" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
                                     </td>
                                     <td>
                                         <span class="w-auto">{{ item.product.name }}</span>
@@ -34,6 +34,18 @@
                                     <td>€{{ item.product.price }}</td>
                                 </tr>
                                 {% endfor %}
+                                <tr>
+                                    <td colspan="5" class="text-right">
+                                        <p>Subtotal: €{{ total }}</p>
+                                        <p class="small">Shipping will be calculated at checkout</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="5" class="text-right">
+                                        <a href="{% url 'products' %}" class="btn alt-btn"><i class="fas fa-chevron-left mr-1"></i>Keep Shopping</a>
+                                        <a href="" class="btn accent-btn">Checkout</a>
+                                    </td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
@@ -42,6 +54,5 @@
                 {% endif %}
             </div>
         </div>
-
     </div>
 {% endblock %}

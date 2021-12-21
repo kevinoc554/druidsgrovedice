@@ -31,7 +31,7 @@
                                         <span class="w-auto">{{ item.product.name }}</span>
                                     </td>
                                     <td>
-                                        <form action="" method="POST">
+                                        <form action="{% url 'adjust_cart' item.item_id %}" method="POST" class="form update-form_{{ item.item_id }}">
                                             {% csrf_token %}
                                             <div class="form-group w-75">
                                                 <div class="input-group input-group_{{ item.item_id }}">

@@ -108,7 +108,7 @@ function checkQtyInputsOnLoad() {
 // Check input elements on change of input value and disable +/- buttons as needed
 // Handles direct user inputs
 function checkQtyInputsOnChange() {
-    $('.qty_input').change(function() {
+    $('.qty_input').change(function () {
         let itemId = $(this).data('item_id');
         enableDisableQuantityInputs(itemId);
     })
@@ -117,4 +117,26 @@ function checkQtyInputsOnChange() {
 // Enable Bootstrap tooltips
 $(function () {
     $('[data-toggle="tooltip"]').tooltip()
-  })
+})
+
+// Submit quantity form to the 'adjust_cart' view
+$('.update-item').click(function () {
+    let itemId = $(this).data('item_id')
+    let form = $(`.update-form_${itemId}`)
+    form.submit();
+})
+
+// Post to Remove item from cart entirely
+$('.delete-item').click(function () {
+    let itemId = $(this).data('item_id')
+    let csrfToken = $('[name="csrfmiddlewaretoken"]').val()
+    let url = `/cart/remove/${itemId}`
+    let data = {
+        'csrfmiddlewaretoken': csrfToken
+    }
+
+    $.post(url, data)
+        .done(function () {
+            location.reload();
+        })
+})

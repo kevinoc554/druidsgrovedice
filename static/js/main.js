@@ -140,3 +140,12 @@ $('.delete-item').click(function () {
             location.reload();
         })
 })
+
+// Enable Bootstrap Toasts
+$('.toast').show('show')
+
+// Hide parent toast when 'Close' icon is clicked
+$('[data-dismiss="toast"]').click(function() {
+    let parentToast = $(this).closest('.toast');
+    parentToast.removeClass('show');
+})

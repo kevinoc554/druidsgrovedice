@@ -162,3 +162,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 FREE_DELIVERY_THREHOLD = 50
 STANDARD_DELIVERY_PERCENTAGE = 10
+
+MESSAG_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'

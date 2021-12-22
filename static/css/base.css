@@ -13,6 +13,7 @@
     --main-title-font: 'Ovo';
     --secondary-title-font: 'Goudy Bookletter 1911';
     --general-use-font: 'Roboto';
+    --bootstrap-success: #5cb85c;
 }
 
 /* General */
@@ -167,6 +168,24 @@ body > footer {
     background-color: var(--accent-color-light);
     text-align: center;
     padding: .5rem 0;
+}
+
+/* Toasts */
+.message-container {
+    position: fixed;
+    top: 5.25rem;
+    right: 1rem;
+    z-index: 999999999999;
+}
+
+.toast-success {
+    overflow: visible;
+    z-index: 999999999999;
+    border: 2px outset var(--bootstrap-success);
+}
+
+.toast-header strong .fa-check {
+    color: var(--bootstrap-success);
 }
 
 /* Home */

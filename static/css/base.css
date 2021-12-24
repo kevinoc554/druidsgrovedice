@@ -14,6 +14,9 @@
     --secondary-title-font: 'Goudy Bookletter 1911';
     --general-use-font: 'Roboto';
     --bootstrap-success: #5cb85c;
+    --bootstrap-warning: #ffc107;
+    --bootstrap-error: #dc3545;
+    --bootstrap-info: #17a2b8;
 }
 
 /* General */
@@ -178,10 +181,27 @@ body > footer {
     z-index: 999999999999;
 }
 
-.toast-success {
+.toast-success,
+.toast-warning,
+.toast-error,
+.toast-info {
     overflow: visible;
-    z-index: 999999999999;
+}
+
+.toast-success {
     border: 2px outset var(--bootstrap-success);
+}
+
+.toast-warning {
+    border: 2px outset var(--bootstrap-warning);
+}
+
+.toast-error {
+    border: 2px outset var(--bootstrap-error);
+}
+
+.toast-info {
+    border: 2px outset var(--bootstrap-info);
 }
 
 .toast-header strong .fa-check {

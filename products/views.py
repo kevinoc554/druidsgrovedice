@@ -35,7 +35,7 @@ def all_products(request):
             products = products.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
 
-        if 'product_search' in request.GET:
+        if 'product-search' in request.GET:
             query = request.GET['product-search']
             if not query:
                 messages.error(request, 'You did not enter any search terms.')

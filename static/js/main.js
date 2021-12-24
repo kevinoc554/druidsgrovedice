@@ -147,5 +147,5 @@ $('.toast').show('show')
 // Hide parent toast when 'Close' icon is clicked
 $('[data-dismiss="toast"]').click(function() {
     let parentToast = $(this).closest('.toast');
-    parentToast.removeClass('show');
+    parentToast.removeClass('show').addClass('d-none');
 })

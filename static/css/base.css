@@ -177,7 +177,7 @@ body > footer {
 .message-container {
     position: fixed;
     top: 5.25rem;
-    right: 1rem;
+    right: .1rem;
     z-index: 999999999999;
 }
 
@@ -265,6 +265,10 @@ body > footer {
 
     .allauth-container {
         margin-top: 5.3rem;
+    }
+
+    .message-container{
+        right: 2rem;
     }
 
     #id_login,

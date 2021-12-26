@@ -181,6 +181,12 @@ body > footer {
     z-index: 999999999999;
 }
 
+.cart-details {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
 .toast-success,
 .toast-warning,
 .toast-error,

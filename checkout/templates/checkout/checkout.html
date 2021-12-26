@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_title %}Checkout{% endblock %}
+
+{% block content %}
+    <div class="container-fluid heading-container">
+        <h1>Checkout</h1>
+        <hr>
+    </div>
+    <div class="container-fluid cart-container">
+        <div class="row">
+            <div class="col-12 col-md-8">
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <fieldset class="px-3 mb-5">
+                        <legend class="text-muted">Contact Information:</legend>
+                        {{ order_form.full_name | as_crispy_field }}
+                        {{ order_form.email | as_crispy_field }}
+                    </fieldset>
+                    <fieldset class="px-3 mb-5">
+                        <legend class="text-muted">Delivery Information:</legend>
+                        {{ order_form.phone_number | as_crispy_field }}
+                        {{ order_form.street_address1 | as_crispy_field }}
+                        {{ order_form.street_address2 | as_crispy_field }}
+                        {{ order_form.town_or_city | as_crispy_field }}
+                        {{ order_form.county | as_crispy_field }}
+                        {{ order_form.postcode | as_crispy_field }}
+                        <div class="form-check form-check-inline">
+							{% if user.is_authenticated %}
+								<label class="form-check-label" for="id-save-info">Save this information for next time?</label>
+                                <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info">
+							{% endif %}
+						</div>
+                    </fieldset>
+                    <fieldset class="px-3">
+                        <legend class="text-muted">Payment Information:</legend>
+                        <div class="mb-3" id="card-element"></div>
+                        <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
+                    </fieldset>
+                    <div class="text-center text-md-right">
+                        <a href="{% url 'view_cart' %}" class="btn alt-btn my-1"><i class="fas fa-chevron-left mr-1"></i>Review Cart</a>
+                        <a href="" class="btn my-1 accent-btn">Complete Purchase</a>
+                    </div>
+                </form>
+            </div>
+            <div class="col-12 col-md-4 order-first order-md-last">
+                {% for item in cart_items %}
+                <div class="row my-2">
+                    <div class="col-3">
+                        <img src="{{ item.product.image.url }}" alt="{{ item.product.name }}" class="w-100">
+                    </div>
+                    <div class="col-6">
+                        <div class="row">
+                            <div class="col-12">
+                                <p>{{ item.product.name }}</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <p><span class="small text-muted">Quantity:</span> {{ item.quantity }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="col-12">
+                            <p class="pr-2">€{{ item.product.price }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                <div class="row">
+                    <div class="col-12">
+                        <hr>
+                        <p><span class="small text-muted">Subtotal:</span> €{{ total }}</p>
+                        <p><span class="small text-muted">Shipping:</span> €{{ delivery|floatformat:2 }}</p>
+                        <hr>
+                        <p>Grand Total: €{{ grand_total|floatformat:2 }}</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

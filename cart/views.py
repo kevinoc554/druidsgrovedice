@@ -30,6 +30,9 @@ def add_to_cart(request, item_id):
 
     request.session['cart'] = cart
 
+    if 'buy_now' in request.POST:
+        return redirect(reverse('checkout'))
+
     return redirect(redirect_url)
 
 

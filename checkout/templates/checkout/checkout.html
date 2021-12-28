@@ -11,7 +11,7 @@
     <div class="container-fluid cart-container">
         <div class="row">
             <div class="col-12 col-md-8">
-                <form action="" method="POST">
+                <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                     {% csrf_token %}
                     <fieldset class="px-3 mb-5">
                         <legend class="text-muted">Contact Information:</legend>
@@ -21,6 +21,7 @@
                     <fieldset class="px-3 mb-5">
                         <legend class="text-muted">Delivery Information:</legend>
                         {{ order_form.phone_number | as_crispy_field }}
+                        {{ order_form.country | as_crispy_field }}
                         {{ order_form.street_address1 | as_crispy_field }}
                         {{ order_form.street_address2 | as_crispy_field }}
                         {{ order_form.town_or_city | as_crispy_field }}
@@ -40,7 +41,7 @@
                     </fieldset>
                     <div class="text-center text-md-right">
                         <a href="{% url 'view_cart' %}" class="btn alt-btn my-1"><i class="fas fa-chevron-left mr-1"></i>Review Cart</a>
-                        <a href="" class="btn my-1 accent-btn">Complete Purchase</a>
+                        <button type="submit" class="btn my-1 accent-btn">Complete Purchase</button>
                     </div>
                 </form>
             </div>

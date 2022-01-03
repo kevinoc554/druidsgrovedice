@@ -14,8 +14,8 @@
     {% endblock %}
 
     {% block favicons %}
-    <link rel="icon" type="image/svg+xml" href="/media/favicon.svg">
-    <link rel="icon" type="image/png" href="/media/favicon.png">
+    <link rel="icon" type="image/svg+xml" href="{{ MEDIA_URL }}favicon.svg">
+    <link rel="icon" type="image/png" href="{{ MEDIA_URL }}favicon.png">
     {% endblock %}
 
     {% block corecss %}
@@ -39,7 +39,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <a class="navbar-brand mx-auto" href="{% url 'home' %}">
-            <img src="/media/brand-logo-1.png" height="45" width="45" alt="">
+            <img src="{{ MEDIA_URL }}brand-logo-1.png" height="45" width="45" alt="">
         </a>
 
         <div class="my-2 my-lg-0 order-lg-last" data-toggle="modal" data-target="#searchModal">

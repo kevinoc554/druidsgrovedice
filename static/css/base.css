@@ -262,6 +262,16 @@ body > footer {
     padding-bottom: 10rem;
 }
 
+/* Order Confirmed */
+.order-confirmed-img {
+    height: 60px;
+    width: 60px;
+}
+
+.order-confirmed-card {
+    background-color: var(--main-bg-color);
+}
+
 /* Stripe Elements */
 .StripeElement,
 .stripe-style-input {

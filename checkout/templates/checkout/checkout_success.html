@@ -8,7 +8,7 @@
     <h1>Order Complete</h1>
     <hr>
 </div>
-<div class="container">
+<div class="container checkout-success-container">
     <div class="row">
         <div class="col-12 col-md-8">
             <p>Thank you for your purchase. Your order number is
@@ -169,11 +169,9 @@
                 </div>
             </div>
         </div>
-        <div class="col-12 col-md-4 text-center">
-            <div class="">
-                <p>Check out the store for more deals!</p>
-                <a href="{% url 'products' %}" class="btn accent-btn">Continue Shopping</a>
-            </div>
+        <div class="col-12 col-md-4 mt-3 my-md-auto text-center">
+            <p>Check out the store for more deals!</p>
+            <a href="{% url 'products' %}" class="btn accent-btn">Continue Shopping</a>
         </div>
     </div>
 </div>

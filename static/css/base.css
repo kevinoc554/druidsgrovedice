@@ -272,6 +272,10 @@ body > footer {
     background-color: var(--main-bg-color);
 }
 
+.checkout-success-container {
+    padding-bottom: 8rem;
+}
+
 /* Stripe Elements */
 .StripeElement,
 .stripe-style-input {
@@ -351,5 +355,9 @@ body > footer {
 
     .dropdown-menu {
         border: 1px solid rgba(0, 0, 0, 0.15);
+    }
+
+    .checkout-success-container {
+        padding-bottom: 6rem;
     }
 }

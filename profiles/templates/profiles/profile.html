@@ -13,8 +13,18 @@
     </div>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12 col-md-7">{{ profile }}</div>
-            <div class="col-12 col-md-5">Order history</div>
+            <div class="col-12 col-md-7">
+                <h4>Default Delivery Info:</h4>
+                <form action="{% url 'profile' %}" method="POST" id="profile-update-form">
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                    <button type="submit" class="btn accent-btn float-right">Update Info</button>
+                </form>
+            </div>
+            <div class="col-12 col-md-5">
+                <h4>Order history</h4>
+                {{ orders }}
+            </div>
         </div>
     </div>
 {% endblock %}

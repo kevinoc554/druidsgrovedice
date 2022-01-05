@@ -9,7 +9,10 @@ def view_cart(request):
     """
     A view to return and display the contents of the user's shopping cart
     """
-    return render(request, 'cart/shopping_cart.html')
+    context = {
+        'do_not_show_cart': True,
+    }
+    return render(request, 'cart/shopping_cart.html', context)
 
 
 def add_to_cart(request, item_id):

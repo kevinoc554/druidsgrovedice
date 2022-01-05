@@ -23,6 +23,7 @@ def profile(request):
     context = {
         'form': form,
         'orders': orders,
+        'do_not_show_cart': True,
     }
 
     return render(request, template, context)

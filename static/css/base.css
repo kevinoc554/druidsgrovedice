@@ -304,6 +304,16 @@ body > footer {
     color: #aab7c4;
 }
 
+.order-fields select,
+.order-fields select option {
+    color: var(--main-font-color);
+}
+
+.order-fields select:invalid,
+.order-fields select option[value=""] {
+    color: #aab7c4 !important;
+}
+
 .fieldset-label {
     position: relative;
     right: .5rem;

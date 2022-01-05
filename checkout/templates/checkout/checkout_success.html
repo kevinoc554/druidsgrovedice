@@ -1,11 +1,24 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block page_title %}Order Complete{% endblock %}
+
+{% block page_title %}
+    {% if from_profile %}
+        Previous Order
+    {% else %}
+        Order Complete
+    {% endif %}
+{% endblock %}
 
 {% block content %}
 <div class="container-fluid heading-container">
-    <h1>Order Complete</h1>
+    <h1>
+        {% if from_profile %}
+            Previous Order
+        {% else %}
+            Order Complete
+        {% endif %}
+    </h1>
     <hr>
 </div>
 <div class="container checkout-success-container">
@@ -170,8 +183,13 @@
             </div>
         </div>
         <div class="col-12 col-md-4 mt-3 my-md-auto text-center">
-            <p>Check out the store for more deals!</p>
-            <a href="{% url 'products' %}" class="btn accent-btn">Continue Shopping</a>
+            {% if from_profile %}
+                <p>Go back to Profile page.</p>
+                <a href="{% url 'profile' %}" class="btn accent-btn"><i class="fas fa-backward"></i> Back</a>
+            {% else %}
+                <p>Check out the store for more deals!</p>
+                <a href="{% url 'products' %}" class="btn accent-btn">Continue Shopping</a>
+            {% endif %}
         </div>
     </div>
 </div>

@@ -39,7 +39,7 @@
                     {% for order in orders %}
                         <div class="row">
                             <div class="col-4">
-                                <a href="">{{ order.order_number|truncatechars:6 }}</a>
+                                <a href="{% url 'order_history' order.order_number %}">{{ order.order_number|truncatechars:6 }}</a>
                             </div>
                             <div class="col-4">
                                 {{ order.date }}

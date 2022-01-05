@@ -10,7 +10,7 @@ class UserProfile(models.Model):
     """
     A User profile model for tracking default delivery info and order history
     """
-    default_user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     default_phone_number = models.CharField(max_length=20,
                                             null=True, blank=True)
     default_country = CountryField(blank_label="Country*",
@@ -28,7 +28,7 @@ class UserProfile(models.Model):
 
     def __str__(self):
         return self.user.username
-    
+
     @receiver(post_save, sender=User)
     def update_or_create_user_profile(sender, instance, created, **kwargs):
         """

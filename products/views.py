@@ -103,7 +103,7 @@ def edit_product(request, product_id):
         if form.is_valid():
             form.save()
             messages.success(request, 'Product successfully updated.')
-            return redirect(reverse('edit_product'))
+            return redirect(reverse('edit_product', args=[product.id]))
         else:
             messages.error(request, (
                 'Failed to update product. Please check your form is correct'

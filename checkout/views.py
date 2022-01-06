@@ -14,7 +14,8 @@ from profiles.forms import UserProfileForm
 
 def checkout(request):
     """
-    A view to render the checkout form
+    A view to render the checkout form, will pre-populate
+    with user's default delivery address if possible
     """
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
@@ -72,7 +73,24 @@ def checkout(request):
             currency=settings.STRIPE_CURRENCY,
         )
 
-        order_form = OrderForm()
+        if request.user.is_authenticated:
+            try:
+                profile = UserProfile.objects.get(user=request.user)
+                order_form = OrderForm(initial={
+                    'full_name': profile.user.get_full_name(),
+                    'email': profile.user.email,
+                    'phone_number': profile.default_phone_number,
+                    'country': profile.default_country,
+                    'postcode': profile.default_postcode,
+                    'town_or_city': profile.default_town_or_city,
+                    'street_address1': profile.default_street_address1,
+                    'street_address2': profile.default_street_address2,
+                    'county': profile.default_county,
+                })
+            except UserProfile.DoesNotExist:
+                order_form = OrderForm()
+        else:
+            order_form = OrderForm()
 
     context = {
         'order_form': order_form,
@@ -86,7 +104,8 @@ def checkout(request):
 
 def checkout_success(request, order_number):
     """
-    A view to handle successful purchases
+    A view to handle successful purchases, will attach order
+    to user's profile and save delivery info if user opts in
     """
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)

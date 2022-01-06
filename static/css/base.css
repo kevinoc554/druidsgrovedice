@@ -257,6 +257,15 @@ body > footer {
     border: none;
 }
 
+.add-product-link {
+    color: var(--main-font-color);
+}
+
+.add-product-link:focus,
+.add-product-link:hover {
+    color: var(--accent-color-light);
+}
+
 /* Product Detail */
 .product-detail-container {
     padding-bottom: 10rem;

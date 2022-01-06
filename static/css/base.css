@@ -363,6 +363,16 @@ body > footer {
     color: #aab7c4;
 }
 
+/* Site Admin Forms */
+.add-product-form label {
+    font-family: var(--secondary-title-font);
+    font-size: 125%;
+}
+
+.add-product-container {
+    padding-bottom: 10rem;
+}
+
 /* Media Queries */
 @media screen and (min-width: 767px) {
     .jumbotron {

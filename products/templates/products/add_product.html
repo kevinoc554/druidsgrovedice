@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_title %}Catalog{% endblock %}
+
+{% block content %}
+<div class="container-fluid heading-container">
+    <h1>Add a Product</h1>
+    <hr>
+</div>
+<div class="container add-product-container">
+    <form action="" method="POST" class="form add-product-form">
+        {{ form|crispy }}
+        <button type="submit" class="btn accent-btn float-right">Add Product</button>
+    </form>
+</div>
+{% endblock %}

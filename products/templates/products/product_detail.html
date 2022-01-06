@@ -16,10 +16,12 @@
             {% else %}
             <img class="img-fluid mx-auto d-block" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
             {% endif %}
+            {% if request.user.is_superuser %}
             <div class="text-center mt-2">
                 <button class="btn alt-btn" data-toggle='modal' data-target='#deleteModal'>Delete Product</button>
                 <a href="{% url 'edit_product' product.id %}" class="btn accent-btn">Edit Product</a>
             </div>
+            {% endif %}
         </div>
         <div class="col-12 col-lg-6">
             <div class="row">

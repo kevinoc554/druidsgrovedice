@@ -17,7 +17,8 @@ from .send_confirmation_email import send_confirmation_email
 def checkout(request):
     """
     A view to render the checkout form, will pre-populate
-    with user's default delivery address if possible
+    with user's default delivery address if possible.
+    Will send confirmation email on success.
     """
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
@@ -56,6 +57,7 @@ def checkout(request):
                     order.delete()
                     return redirect(reverse('view_cart'))
             request.session['save_info'] = 'save-info' in request.POST
+            send_confirmation_email(order)
             return redirect(reverse('checkout_success', args=[order.order_number]))
         else:
             messages.error(request, 'There was an error with your form. \
@@ -106,12 +108,11 @@ def checkout(request):
 
 def checkout_success(request, order_number):
     """
-    A view to handle successful purchases and send confirmation email, 
+    A view to handle successful purchases, 
     will attach order to user's profile and save delivery info if user opts in
     """
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
-    send_confirmation_email(order)
 
     if request.user.is_authenticated:
         profile = UserProfile.objects.get(user=request.user)

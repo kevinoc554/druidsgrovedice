@@ -9,9 +9,14 @@
     <hr>
 </div>
 <div class="container add-product-container">
-    <form action="" method="POST" class="form add-product-form">
+    <form action="" method="POST" enctype="multipart/form-data" class="form add-product-form">
+        {% csrf_token %}
         {{ form|crispy }}
-        <button type="submit" class="btn accent-btn float-right">Add Product</button>
+        <div class="text-right">
+            <a href="{% url 'products' %}" class="btn alt-btn"><i class="far fa-times-circle"></i> Cancel</a>
+            <button type="submit" class="btn accent-btn">Add Product</button>
+        </div>
+        
     </form>
 </div>
 {% endblock %}

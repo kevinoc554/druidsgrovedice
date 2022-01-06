@@ -98,7 +98,20 @@ def edit_product(request, product_id):
     A view to edit/update product information
     """
     product = get_object_or_404(Product, pk=product_id)
-    form = ProductForm(instance=product)
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES, instance=product)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Product successfully updated.')
+            return redirect(reverse('edit_product'))
+        else:
+            messages.error(request, (
+                'Failed to update product. Please check your form is correct'
+                ' and try again.')
+            )
+    else:
+        form = ProductForm(instance=product)
+
     template = 'products/edit_product.html'
     context = {
         'form': form,

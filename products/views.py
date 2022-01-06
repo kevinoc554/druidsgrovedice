@@ -91,3 +91,18 @@ def add_product(request):
     }
 
     return render(request, template, context)
+
+
+def edit_product(request, product_id):
+    """
+    A view to edit/update product information
+    """
+    product = get_object_or_404(Product, pk=product_id)
+    form = ProductForm(instance=product)
+    template = 'products/edit_product.html'
+    context = {
+        'form': form,
+        'product': product,
+    }
+
+    return render(request, template, context)

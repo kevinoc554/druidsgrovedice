@@ -11,6 +11,8 @@ from .forms import OrderForm
 from profiles.models import UserProfile
 from profiles.forms import UserProfileForm
 
+from .send_confirmation_email import send_confirmation_email
+
 
 def checkout(request):
     """
@@ -104,11 +106,12 @@ def checkout(request):
 
 def checkout_success(request, order_number):
     """
-    A view to handle successful purchases, will attach order
-    to user's profile and save delivery info if user opts in
+    A view to handle successful purchases and send confirmation email, 
+    will attach order to user's profile and save delivery info if user opts in
     """
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
+    send_confirmation_email(order)
 
     if request.user.is_authenticated:
         profile = UserProfile.objects.get(user=request.user)

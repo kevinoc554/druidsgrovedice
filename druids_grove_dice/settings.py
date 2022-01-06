@@ -130,10 +130,6 @@ else:
         }
     }
 
-# Production DB url for migrations
-# DATABASES = {
-#         'default': dj_database_url.parse('postgres://qxqljbjpsyxpau:95a86d461af532b8bbe33031914ef32a75e0ec1b48eb1ab77c72886dcaf6d5b3@ec2-54-171-25-232.eu-west-1.compute.amazonaws.com:5432/d76qb641iaaq4o')
-#     }
 
 
 # Password validation
@@ -212,3 +208,4 @@ STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
 
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
+DEFAULT_FROM_EMAIL = 'info@druidsgrove.com'

@@ -73,5 +73,66 @@ The site's JavaScript was validated using [JSHint](https://jshint.com/), and no 
 - The site owner (and only the site owner) can add, edit update and delete products by following the clearly marked links on the Catalog and Product Details pages. These links are not displayed to users who do not have the adequate permissions to use them (US401, US402, US403).
 
 # Manual Testing
+## Testing Environments
+
+Development and initial testing took place on a HP 250 G6 Laptop (Windows 10) in Chrome. Subsequent testing took place across the following devices, operating systems and browsers:
+
+- Devices:
+
+  - HP 250 G6 Laptop (Windows 10)
+  - MacBook Pro 2013 (MacOS)
+  - OnePlus 6T (Oxygen OS)
+  - Samsung Galaxy S9 (Android)
+  - Apple iPad (iPadOS 14)
+- Browsers:
+
+  - Chrome
+  - Firefox
+  - Edge
+  - Safari
+
+## Functionality
+The basic functionality of the site (user onboarding and purchasing items) was manually tested extensively, per the User Story tests above. Additionaly, the following points were checked.
+### CRUD Functions
+- Users can Create accounts.
+- Users can change (Update) their passwords via password reset.
+- Users can change (Update) their default delivery address.
+- All products can be viewed on the Catalog page (Read).
+- The site owner can add (Create), edit (Update), and Delete products from the storefront.
+### Links
+- All internal links are functioning correctly.
+- All external links open in a new tab.
+- There are no references or links to pages that do not exist.
+- There are no broken links.
+### Forms
+- All forms submit correctly.
+- All forms validate the users input and provide clear feedback when there is an issue.
+### Email
+- Email Verification, Forgot Password and Order Confirmation emails were all checked and found to be working.
+
+## Usability
+### Navigation
+- The navigation bar is always present, allowing users to move around the site with ease.
+- A link to the home page is always present.
+- The sites buttons and form inputs are easily identified and interacted with.
+- The purpose of all pages of the site can be easily understood.
+### Content
+- The content of the site has been checked for spelling and grammar mistakes in an attempt to ensure it is as easy to parse as possible.
+- Any instructions for the user, seen during the account creation or purchase processes, are clear and easy to follow.
+
+## Security
+The site's security features were tested, with the following findings:
+- Logged out Users were not able to access a Profile page
+- Only the current logged in user can access their Order History
+- Only users with the appropriate permissions can see and use the options to add, edit and delete products.
+
+## Compatability & Responsiveness
+- The site was checked at a variety of screen sizes and in different browsers.
+- All testing steps listed were taken on all devices and browsers outlined above, unless otherwise stated.
 
 # Bugs
+## Fixed
+- Bug: Toasts not disappearing when dismissed.
+    - Solution: Added custom JS to change the element's `display` to `none` when the close (x) is clicked.
+- Bug: Users could access each others Order Histories via the URL.
+    - Solution: Added a check to the order history view that confirmed that the current user matches the user on the order, and if not redirects them away.

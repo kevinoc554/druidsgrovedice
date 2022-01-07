@@ -16,19 +16,19 @@
                     <div class="table-responsive">
                         <table class="table table-sm table-borderless">
                             <thead>
-                                <th scope="col">Product</th>
-                                <th scope="col"></th>
-                                <th scope="col">Quantity</th>
-                                <th scope="col">Price</th>
+                                <th scope="col" class="d-none d-md-table-cell">Product</th>
+                                <th scope="col" class="d-none d-md-table-cell"></th>
+                                <th scope="col" class="d-none d-md-table-cell">Quantity</th>
+                                <th scope="col" class="d-none d-md-table-cell">Price</th>
                             </thead>
                             <tbody>
                                 {% for item in cart_items %}
                                 <tr>
                                     <td>
                                         {% if item.product.image %}
-                                        <img class="img-fluid h-50" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                                        <img class="img-fluid h-50 d-none d-md-block" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
                                         {% else %}
-                                        <img class="img-fluid h-50" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
+                                        <img class="img-fluid h-50 d-none d-md-block" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
                                         {% endif %}
                                     </td>
                                     <td>

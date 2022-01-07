@@ -45,6 +45,7 @@ The user stories for this site were divided into 5 broad categories, linked belo
 | US102      | Customer | Search products by name or description | Find a specific product to purchase                |
 | US103      | Customer | View individual product details        | Learn more about it and decide if I want to buy it |
 | US104      | Customer | View my order history                  | Refer back to my previous purchases                |
+| US105      | Customer | Order and filter products              | Find a specific product to purchase                |
 
 ### **2. User Accounts**
 | ID            | As a…     | I want to…                 | So I can...                                                                                 |
@@ -70,17 +71,6 @@ The user stories for this site were divided into 5 broad categories, linked belo
 | US401              | Site Owner | Add products           | Make new products available for site users to view and purchase |
 | US402              | Site Owner | Edit & update products | Change product names and descriptions as needed                 |
 | US403              | Site Owner | Delete products        | Remove products from the store front as needed                  |
-
-### **5. Communication**
-| ID            | As a…      | I want to…                           | So I can...                                         |
-|---------------|------------|--------------------------------------|----------------------------------------------------|
-| US501         | Site User  | View blog posts                      | Keep up to date with the latest news and products  |
-| US502         | Site Owner | Make blog posts                      | Provide updates on the business and new products   |
-| US503         | Site Owner | Edit & update blog posts             | Provide more information or correct typos/mistakes |
-| US504         | Site Owner | Delete blog posts                    | Remove blog posts from the site as needed          |
-| US505         | Site User  | Sign up for the newsletter           | Be notified of new posts as they go live           |
-| US506         | Site User  | Unsubscribe from the newsletter      | Stop receiving the updates if I choose             |
-| US507         | Site User  | Access the site's social media pages | Connect on different social media platforms        |
 
 ## **Design**
 
@@ -113,6 +103,31 @@ In terms of accessiblity, the site's text is predominantly in a shade of black (
 - [Roboto](https://fonts.google.com/specimen/Roboto#standard-styles) - Used in product descriptions and for any pricing information.
 
 # **Features**
+## Users - Authentication & Profiles
+- Users can Register for accounts, and verify their emsail address.
+- Users can Log in and out with ease.
+- Users can reset their passwords via email.
+- Users can view their individual Profile pages, where they can see their Order History and update their default delivery address.
+
+## Users - Shopping & Purchasing
+- Users can browse all products in the Catalog.
+- Users can use the dedicated Search modal which can be accessed via the navbar to search the database. Search terms are checked against the product names and descriptions.
+- Users can order the products by price or by name.
+- Users can filter the products by category.
+- Users can choose a quantity of an item before adding to their cart.
+- Users can go straight to checkout by clicking Buy Now instead of Add to Cart.
+- In the shopping cart, users can change the quantity of items, or remove them altogether.
+- At checkout, users can provide delivery and payment info to complete the purchase.
+- Purchases are completed using Stripe 
+- Upon purchase, the user is shown an Order Confirmation page, sent an Order Confirmation email and (if they have an account) the order is added to the order history on thei Profile.
+
+## Site Owner
+- Site owners can add new products to the Catalog
+- Site owners can edit the name, description, price and image of existing products. A placeholder image is displayed if none is provided.
+- Site owners can delete products from the Catalog. Clicking the Delete button triggers a modal which asks the user if they are sure they wish to proceede.
+
+## Features to Implement
+- A suggested feature early in development was a Blog, which would allow the site owner to communicate with the customer base. While this was not implemented in the final project, it remains a possibility for future development.
 
 # **Technologies Used**
 Languages:

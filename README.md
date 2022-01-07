@@ -4,7 +4,9 @@
 
 Druid's Grove Dice is an independent Irish dice maker inspired by nature, myth and magic. This site an online storefront and creator blog that aims to provide fans of tabletop role-playing games a place to find and purchase bespoke hand-made dice sets.
 
-View the live site [here](LINK TO FOLLOW).
+View the live site [here](https://druids-grove-dice.herokuapp.com/).
+
+![Deployed Site](docs/screenshots/3-devices-black.png)
 
 # Table of Contents
 

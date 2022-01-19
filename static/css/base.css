@@ -110,7 +110,8 @@ h4, h5 {
 
 .main-container,
 .catalog-container,
-.cart-container {
+.cart-container,
+.blog-container {
     padding-bottom: 6rem;
 }
 

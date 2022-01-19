@@ -1,5 +1,7 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.contrib import messages
 from .models import BlogPost
+from .forms import BlogForm
 
 
 def all_blogposts(request):
@@ -38,7 +40,19 @@ def add_post(request):
     """
     A view to add a Blog Post
     """
+    if not request.user.is_superuser:
+        messages.error(request, 'You do not have permission to do that.')
+        return redirect('home')
+    if request.method == 'POST':
+        form = BlogForm(request.POST, request.FILES)
+        if form.is_valid():
+            post = form.save()
+            messages.success(request, 'Post successfully added.')
+            return redirect(reverse('blog_post', args=[post.id]))
+    form = BlogForm()
     template = 'blog/add_post.html'
-    context = {}
+    context = {
+        'form': form,
+    }
 
     return render(request, template, context)

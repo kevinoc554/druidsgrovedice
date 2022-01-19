@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_title %}Blog{% endblock %}
+
+{% block blog_active %} active{% endblock %}
+{% block blog_current %}<span class="sr-only">(current)</span>{% endblock %}
+
+{% block content %}
+<div class="container-fluid heading-container">
+    <h1>{{ post.title }}</h1>
+    <hr>
+</div>
+<div class="container blog-container">
+    <div class="row">
+        <div class="col-12 text-center mb-2">
+            {% if post.image %}
+            <img class="img-fluid mx-auto d-block" src="{{ post.image.url }}" alt="{{ post.title }}">
+            {% else %}
+            <img class="img-fluid mx-auto d-block" src="{{ MEDIA_URL }}noimage.png" alt="{{ post.title }}">
+            {% endif %}
+            <h4 class="mt-2">{{ post.title }}</h4>
+            <p>
+                <span class="font-weight-bold">By: </span><span class="font-italic small">{{ post.author.username }}</span><br>
+                <span class="font-weight-bold">On: </span><span class="font-italic small">{{ post.created_on }}</span>
+            </p>
+            {% if request.user == post.author or request.user.is_superuser %}
+            <div class="text-center mt-2">
+                <button class="btn alt-btn" data-toggle='modal' data-target='#deletePostModal'>Delete Post</button>
+                <a href="" class="btn accent-btn">Edit Post</a>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <p>{{ post.content }}</p>
+            {% if post.updated_on|timesince != post.created_on|timesince %}
+                <p class="font-italic small">Post updated on {{ post.updated_on }}</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

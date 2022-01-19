@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import BlogPost
 
 
@@ -13,6 +13,22 @@ def all_blogposts(request):
     context = {
         'first': first,
         'blogposts': blogposts,
+    }
+
+    return render(request, template, context)
+
+
+def blog_post(request, blog_id):
+    """
+    A view to return a specific blog post, and render it
+    along with any comments.
+    """
+    post = get_object_or_404(BlogPost, pk=blog_id)
+    print(post.created_on)
+    print(post.updated_on)
+    template = 'blog/blog_post.html'
+    context = {
+        'post': post,
     }
 
     return render(request, template, context)

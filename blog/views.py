@@ -32,3 +32,13 @@ def blog_post(request, blog_id):
     }
 
     return render(request, template, context)
+
+
+def add_post(request):
+    """
+    A view to add a Blog Post
+    """
+    template = 'blog/add_post.html'
+    context = {}
+
+    return render(request, template, context)

@@ -426,11 +426,13 @@ body > footer {
 }
 
 /* Site Admin Forms */
+.add-post-form label,
 .add-product-form label {
     font-family: var(--secondary-title-font);
     font-size: 125%;
 }
 
+.add-post-container,
 .add-product-container {
     padding-bottom: 10rem;
 }

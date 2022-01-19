@@ -265,10 +265,13 @@ body > footer {
     border: none;
 }
 
+.add-post-link,
 .add-product-link {
     color: var(--main-font-color);
 }
 
+.add-post-link:focus,
+.add-post-link:hover,
 .add-product-link:focus,
 .add-product-link:hover {
     color: var(--accent-color-light);

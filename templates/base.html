@@ -68,7 +68,10 @@
                       <div class="dropdown-divider"></div>
                       <a class="dropdown-item" href="{% url 'products' %}">All Products</a>
                     </div>
-                  </li>
+                </li>
+                <li class="nav-item{% block blog_active %}{% endblock %}">
+                    <a class="nav-link" href="{% url 'blog' %}">Blog{% block blog_current %}{% endblock %}</a>
+                </li>
                 {% if request.user.is_authenticated %}
                     <li class="nav-item{% block profile_active %}{% endblock %}">
                         <a class="nav-link" href="{% url 'profile' %}">Profile{% block profile_current %}{% endblock %}</a>

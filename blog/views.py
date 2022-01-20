@@ -61,3 +61,20 @@ def add_post(request):
     }
 
     return render(request, template, context)
+
+
+def edit_post(request, blog_id):
+    """
+    A view to edit and update the content of a blog post
+    """
+    if not request.user.is_superuser:
+        messages.error(request, 'You do not have permission to do that.')
+        return redirect('home')
+    post = get_object_or_404(BlogPost, pk=blog_id)
+    form = BlogForm(instance=post)
+    template = 'blog/edit_post.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)

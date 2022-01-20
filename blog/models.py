@@ -15,3 +15,16 @@ class BlogPost(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Comment(models.Model):
+    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='comments')
+    post = models.ForeignKey(BlogPost, on_delete=models.CASCADE, related_name='comments')
+    body = models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['created_on']
+
+    def __str__(self):
+        return f'Comment {self.body} by {self.author} on {self.created_on}'

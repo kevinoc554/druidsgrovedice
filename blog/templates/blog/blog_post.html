@@ -27,7 +27,7 @@
             {% if request.user == post.author or request.user.is_superuser %}
             <div class="text-center mt-2">
                 <button class="btn alt-btn" data-toggle='modal' data-target='#deletePostModal'>Delete Post</button>
-                <a href="" class="btn accent-btn">Edit Post</a>
+                <a href="{% url 'edit_post' post.id %}" class="btn accent-btn">Edit Post</a>
             </div>
             {% endif %}
         </div>

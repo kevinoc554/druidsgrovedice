@@ -11,7 +11,7 @@
     <hr>
 </div>
 <div class="container blog-container">
-    <form action="" method="POST" enctype="multipart/form-data" class="form blog-form">
+    <form action="{% url 'edit_post' post.id %}" method="POST" enctype="multipart/form-data" class="form blog-form">
         {% csrf_token %}
         {{ form.title|as_crispy_field }}
         {{ form.content|as_crispy_field }}

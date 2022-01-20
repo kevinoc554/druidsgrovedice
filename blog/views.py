@@ -26,8 +26,6 @@ def blog_post(request, blog_id):
     along with any comments.
     """
     post = get_object_or_404(BlogPost, pk=blog_id)
-    print(post.created_on)
-    print(post.updated_on)
     template = 'blog/blog_post.html'
     context = {
         'post': post,
@@ -71,10 +69,24 @@ def edit_post(request, blog_id):
         messages.error(request, 'You do not have permission to do that.')
         return redirect('home')
     post = get_object_or_404(BlogPost, pk=blog_id)
-    form = BlogForm(instance=post)
+    if request.method == 'POST':
+        data = {
+            'author': request.user,
+            'title': request.POST['title'],
+            'content': request.POST['content']
+        }
+        form = BlogForm(data, request.FILES, instance=post)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Post successfully updated.')
+            return redirect(reverse('blog_post', args=[post.id]))
+    else:
+        form = BlogForm(instance=post)
+
     template = 'blog/edit_post.html'
     context = {
         'form': form,
+        'post': post
     }
 
     return render(request, template, context)

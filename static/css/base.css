@@ -267,7 +267,7 @@ body > footer {
 
 .add-post-link,
 .add-product-link {
-    color: var(--main-font-color);
+    color: var(--accent-color-dark);
 }
 
 .add-post-link:focus,

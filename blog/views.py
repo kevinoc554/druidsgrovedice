@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from .models import BlogPost
-from .forms import BlogForm
+from .forms import BlogForm, CommentForm
 
 
 def all_blogposts(request):
@@ -27,10 +27,23 @@ def blog_post(request, blog_id):
     """
     post = get_object_or_404(BlogPost, pk=blog_id)
     comments = post.comments.all()
+    new_comment = None
+    if request.method == 'POST' and request.user.is_authenticated:
+        form = CommentForm(request.POST)
+        if form.is_valid():
+            new_comment = form.save(commit=False)
+            new_comment.author = request.user
+            new_comment.post = post
+            new_comment.save()
+            messages.success(request, 'Comment successfully added.')
+            return redirect(reverse('blog_post', args=[post.id]))
+    else:
+        form = CommentForm()
     template = 'blog/blog_post.html'
     context = {
         'post': post,
         'comments': comments,
+        'form': form
     }
 
     return render(request, template, context)

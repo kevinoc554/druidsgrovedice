@@ -64,6 +64,28 @@
       {% endfor %}
     </div>
   </div>
+  {% if request.user.is_authenticated %}
+    <div class="row mt-4">
+      <div class="col-12">
+        <h5 class="font-weight-bold">Add a Comment:</h5>
+      </div>
+      <div class="col-12">
+        <form action="" method="POST" class="form">
+          {% csrf_token %}
+          {{ form|crispy }}
+          <div class="text-right">
+            <button type="submit" class="btn accent-btn">Add Comment</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  {% else %}
+    <div class="row mt-5">
+      <div class="col-12 text-center">
+        <h4>Login <a href="{% url 'account_login' %}?next=/blog/post/{{post.id}}/">here</a> to leave a comment.</h4>
+      </div>
+    </div>
+  {% endif %}
 </div>
 
 <!-- Delete Post Modal -->

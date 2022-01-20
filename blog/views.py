@@ -90,3 +90,16 @@ def edit_post(request, blog_id):
     }
 
     return render(request, template, context)
+
+
+def delete_post(request, blog_id):
+    """
+    A view to delete a selected post
+    """
+    if not request.user.is_superuser:
+        messages.error(request, 'You do not have permission to do that.')
+        return redirect('home')
+    post = get_object_or_404(BlogPost, pk=blog_id)
+    post.delete()
+    messages.success(request, 'Blog post successfully deleted.')
+    return redirect('blog')

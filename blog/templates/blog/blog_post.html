@@ -41,4 +41,25 @@
         </div>
     </div>
 </div>
+
+<!-- Delete Post Modal -->
+<div class="modal fade" id="deletePostModal" tabindex="-1" role="dialog" aria-labelledby="deletePostModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="deletePostModalLabel">Delete Blog Post?</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Are you sure you want to delete this Blog Post? Once completed, this cannot be reversed.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn alt-btn" data-dismiss="modal">Cancel</button>
+          <a href="{% url 'delete_post' post.id %}" class="btn accent-btn">Delete Post</a>
+        </div>
+      </div>
+    </div>
+</div>
 {% endblock %}

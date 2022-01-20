@@ -111,7 +111,7 @@ h4, h5 {
 .main-container,
 .catalog-container,
 .cart-container,
-.blog-container {
+.comment-container {
     padding-bottom: 6rem;
 }
 
@@ -484,5 +484,9 @@ body > footer {
 
     .checkout-success-container {
         padding-bottom: 6rem;
+    }
+
+    .comment-container {
+        padding-bottom: 10rem;
     }
 }

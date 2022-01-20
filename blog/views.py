@@ -26,9 +26,11 @@ def blog_post(request, blog_id):
     along with any comments.
     """
     post = get_object_or_404(BlogPost, pk=blog_id)
+    comments = post.comments.all()
     template = 'blog/blog_post.html'
     context = {
         'post': post,
+        'comments': comments,
     }
 
     return render(request, template, context)

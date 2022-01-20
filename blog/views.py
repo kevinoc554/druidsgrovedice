@@ -44,7 +44,12 @@ def add_post(request):
         messages.error(request, 'You do not have permission to do that.')
         return redirect('home')
     if request.method == 'POST':
-        form = BlogForm(request.POST, request.FILES)
+        data = {
+            'author': request.user,
+            'title': request.POST['title'],
+            'content': request.POST['content']
+        }
+        form = BlogForm(data, request.FILES)
         if form.is_valid():
             post = form.save()
             messages.success(request, 'Post successfully added.')

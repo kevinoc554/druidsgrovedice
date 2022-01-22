@@ -25,11 +25,13 @@
     {% if first %}
         <div class="row">
             <div class="col-12 text-center mb-2">
-                {% if first.image %}
-                <img class="img-fluid mx-auto d-block" src="{{ first.image.url }}" alt="{{ first.title }}">
-                {% else %}
-                <img class="img-fluid mx-auto d-block" src="{{ MEDIA_URL }}noimage.png" alt="{{ first.title }}">
-                {% endif %}
+                <a href="{% url 'blog_post' first.id %}">
+                    {% if first.image %}
+                    <img class="img-fluid mx-auto d-block" src="{{ first.image.url }}" alt="{{ first.title }}">
+                    {% else %}
+                    <img class="img-fluid mx-auto d-block" src="{{ MEDIA_URL }}noimage.png" alt="{{ first.title }}">
+                    {% endif %}
+                </a>
                 <h4 class="mt-2">{{ first.title }}</h4>
                 <p class="font-italic small">{{ first.created_on }}</p>
             </div>
@@ -37,11 +39,13 @@
         <div class="row">
         {% for blogpost in blogposts %}
             <div class="col-12 col-md-6 text-center mt-md-1 mb-2">
-                {% if blogpost.image %}
-                <img class="img-fluid mx-auto d-block" src="{{ blogpost.image.url }}" alt="{{ blogpost.title }}">
-                {% else %}
-                <img class="img-fluid mx-auto d-block" src="{{ MEDIA_URL }}noimage.png" alt="{{ blogpost.title }}">
-                {% endif %}
+                <a href="{% url 'blog_post' blogpost.id %}">
+                    {% if blogpost.image %}
+                    <img class="img-fluid mx-auto d-block" src="{{ blogpost.image.url }}" alt="{{ blogpost.title }}">
+                    {% else %}
+                    <img class="img-fluid mx-auto d-block" src="{{ MEDIA_URL }}noimage.png" alt="{{ blogpost.title }}">
+                    {% endif %}
+                </a>
                 <h4 class="mt-2">{{ blogpost.title }}</h4>
                 <p class="font-italic small">{{ blogpost.created_on }}</p>
             </div>    

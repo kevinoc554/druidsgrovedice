@@ -108,6 +108,7 @@ h4, h5 {
     border-color: var(--accent-color-dark);
 }
 
+.blog-container,
 .main-container,
 .catalog-container,
 .cart-container,

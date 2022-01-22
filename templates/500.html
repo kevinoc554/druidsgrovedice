@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_title %}500{% endblock %}
+
+{% block content %}
+<div class="container-fluid heading-container">
+    <h1>Internal Server Error</h1>
+    <hr>
+</div>
+<div class="container error-container mt-5">
+    <div class="row">
+        <div class="col-12 text-center">
+            <h4>Ooops! Something went wrong!</h4>
+            <p>Let's get you back on track. Click the button to go back home.</p>
+            <p><a href="{% url 'home' %}" class="btn alt-btn">Home</a></p>
+        </div>
+    </div>
+</div>
+    
+{% endblock %}

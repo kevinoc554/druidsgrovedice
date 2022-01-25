@@ -118,13 +118,13 @@ In terms of accessiblity, the site's text is predominantly in a shade of black (
 - [Roboto](https://fonts.google.com/specimen/Roboto#standard-styles) - Used in product descriptions and for any pricing information.
 
 # **Features**
-## Users - Authentication & Profiles
+## Authentication & Profiles
 - Users can Register for accounts, and verify their emsail address.
 - Users can Log in and out with ease.
 - Users can reset their passwords via email.
 - Users can view their individual Profile pages, where they can see their Order History and update their default delivery address.
 
-## Users - Shopping & Purchasing
+## Shopping & Purchasing
 - Users can browse all products in the Catalog.
 - Users can use the dedicated Search modal which can be accessed via the navbar to search the database. Search terms are checked against the product names and descriptions.
 - Users can order the products by price or by name.
@@ -136,13 +136,17 @@ In terms of accessiblity, the site's text is predominantly in a shade of black (
 - Purchases are completed using Stripe 
 - Upon purchase, the user is shown an Order Confirmation page, sent an Order Confirmation email and (if they have an account) the order is added to the order history on thei Profile.
 
-## Site Owner
+## Product Management
 - Site owners can add new products to the Catalog
 - Site owners can edit the name, description, price and image of existing products. A placeholder image is displayed if none is provided.
 - Site owners can delete products from the Catalog. Clicking the Delete button triggers a modal which asks the user if they are sure they wish to proceede.
 
+## Blog
+- Site Owners can add, edit and delete Blog Posts
+- Logged in Users can leave comments on Blog Posts
+
 ## Features to Implement
-- A suggested feature early in development was a Blog, which would allow the site owner to communicate with the customer base. While this was not implemented in the final project, it remains a possibility for future development.
+- **Webhooks**: Stripe's webhooks have not been utilized in this site as they are not strictly necessary for the smooth running of the site. However, they are mentioned here as a potential feature to implement in the future as they would be way to build in some redundancy to the checkout process and capture orders that may otherwise be missed due to potential user error or connection issues.
 
 # **Technologies Used**
 Languages:

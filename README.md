@@ -90,6 +90,11 @@ Based on the user stories and goals above, the following schema was mapped out:
 
 ![Database Schema](docs/screenshots/database-schema.jpg)
 
+During development, some changes were made to these models to accomodate the needs of the project:
+- **Order**: The `original_cart` and `stripe_pid` fields are not included in the final model, as they were originally intended for use with Stripe webhooks which were not implemented.
+- **BlogPost**: The `date` field has been replaced by two fields, `created_on` and `updated_on`. This allows the site users to display both when a post was made, and how recently it has been updated or edited.
+- **BlogComment**: The `comment_title` and `comment_body` fields have been consolidated into a `content` field, as decisions regarding the UX/UI rendered comment titles unnecessary.
+
 ### Layout
 An initial rough layout of the site was then devised, as shown in the following information architecture diagram:
 

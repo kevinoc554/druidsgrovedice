@@ -74,6 +74,14 @@ The user stories for this site were divided into 5 broad categories, linked belo
 | US402              | Site Owner | Edit & update products | Change product names and descriptions as needed                 |
 | US403              | Site Owner | Delete products        | Remove products from the store front as needed                  |
 
+### **5. Communication**
+| ID                 | As a…      | I want to…             | So I can...                                                   |
+|--------------------|------------|------------------------|---------------------------------------------------------------|
+| US501              | Site User  | View Blog Posts                    | Keep up to date with the latest news and products |
+| US502              | Site Owner | Make Blog Posts                    | Provide updates on the business and new products  |
+| US503              | Site Owner | Edit, Update and Delete Blog Posts | Provide more information, correct typos and mistakes and remove older posts|
+| US504              | Site User | Leave comments on Blog Posts | Engage with the posted content, and interact with other users |
+
 ## **Design**
 
 ### Database Schema

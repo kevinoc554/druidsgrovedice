@@ -43,27 +43,33 @@
 </div>
 
 <div class="container comment-container mt-2">
-  <div class="row">
-    <div class="col-12">
-      <h4 class="font-weight-bold">Comments <span class="text-muted font-weight-normal">({{ comments|length }})</span></h4>
-      <hr>
+  {% if comments %}
+    <div class="row">
+      <div class="col-12">
+        <h4 class="font-weight-bold">Comments <span class="text-muted font-weight-normal">({{ comments|length }})</span></h4>
+        <hr>
+      </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-12">
-      {% for comment in comments %}
-        <div class="comments p-1">
-          <p class="font-weight-bold">
-            {{ comment.author }}
-            <span class="text-muted font-weight-normal">
-              {{ comment.created_on }}
-            </span>
-          </p>
-          {{ comment.body | linebreaks }}
+    <div class="row">
+        <div class="col-12">
+          {% for comment in comments %}
+            <div class="comments p-1">
+              <p class="font-weight-bold">
+                {{ comment.author }}
+                <span class="text-muted font-weight-normal">
+                  {{ comment.created_on }}
+                </span>
+              </p>
+              {{ comment.body | linebreaks }}
+            </div>
+          {% endfor %}
         </div>
-      {% endfor %}
     </div>
-  </div>
+  {% else %}
+    <div class="col-12 text-center">
+      <h4>Be the first to leave a comment!</h4>
+    </div>
+  {% endif %}
   {% if request.user.is_authenticated %}
     <div class="row mt-4">
       <div class="col-12">

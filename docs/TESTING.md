@@ -72,6 +72,19 @@ The site's JavaScript was validated using [JSHint](https://jshint.com/), and no 
 
 - The site owner (and only the site owner) can add, edit update and delete products by following the clearly marked links on the Catalog and Product Details pages. These links are not displayed to users who do not have the adequate permissions to use them (US401, US402, US403).
 
+
+### **5. Communication**
+| ID                 | As a…      | I want to…             | So I can...                                                   |
+|--------------------|------------|------------------------|---------------------------------------------------------------|
+| US501              | Site User  | View Blog Posts                    | Keep up to date with the latest news and products |
+| US502              | Site Owner | Make Blog Posts                    | Provide updates on the business and new products  |
+| US503              | Site Owner | Edit, Update and Delete Blog Posts | Provide more information, correct typos and mistakes and remove older posts|
+| US504              | Site User | Leave comments on Blog Posts | Engage with the posted content, and interact with other users |
+
+- All Users can see a list of the most recentblog posts on the Blog page, and can clickthrough for more information (US501).
+- The site owner can add, edit and delete blog posts by following the clearly marked links on the Blog and Post Details pages. These links are not displayed to users who do not have the adequate permissions to use them (US502, US503).
+- Logged in Users can leave comment on an individual blog post by submitting the form at the bottom of each post (US504). Logged out users are instead encouraged to log in, and will be redirected back to the post should they do so.
+
 # Manual Testing
 ## Testing Environments
 
